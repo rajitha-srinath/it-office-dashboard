@@ -12,13 +12,10 @@ export const Logs = () => {
 
     const getLogs = async () => {
         setLoading(true);
-
         const res = await fetch('/logs');
         const data = await res.json();
-
         setLogs(data);
         setLoading(false);
-
     }
 
     if (loading) {
